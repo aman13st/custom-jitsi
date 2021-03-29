@@ -183,12 +183,12 @@ class WelcomePage extends AbstractWelcomePage {
             <div
                 className = { `welcome ${contentClassName} ${footerClassName}` }
                 id = 'welcome_page'>
-                <div className = 'welcome-watermark'>
+                {/* <div className = 'welcome-watermark'>
                     <Watermarks defaultJitsiLogoURL = { DEFAULT_WELCOME_PAGE_LOGO_URL } />
-                </div>
+                </div> */}
 
                 <div className = 'header'>
-                    <div className = 'welcome-page-settings'>
+                    {/* <div className = 'welcome-page-settings'>
                         <SettingsButton
                             defaultTab = { SETTINGS_TABS.CALENDAR } />
                         { showAdditionalToolbarContent
@@ -197,14 +197,16 @@ class WelcomePage extends AbstractWelcomePage {
                                 ref = { this._setAdditionalToolbarContentRef } />
                             : null
                         }
-                    </div>
+                    </div> */}
                     <div className = 'header-image' />
                     <div className = 'header-container'>
                         <h1 className = 'header-text-title'>
-                            { t('welcomepage.headerTitle') }
+                            {/* { t('welcomepage.headerTitle') } */}
+                            Customised Jitsi Meet
                         </h1>
                         <span className = 'header-text-subtitle'>
-                            { t('welcomepage.headerSubtitle')}
+                            {/* { t('welcomepage.headerSubtitle')} */}
+                            Join the room to experience secure and high quality meetings
                         </span>
                         <div id = 'enter_room'>
                             <div className = 'enter-room-input-container'>
@@ -216,8 +218,9 @@ class WelcomePage extends AbstractWelcomePage {
                                         className = 'enter-room-input'
                                         id = 'enter_room_field'
                                         onChange = { this._onRoomChange }
-                                        pattern = { ROOM_NAME_VALIDATE_PATTERN_STR }
-                                        placeholder = { this.state.roomPlaceholder }
+                                        // pattern = { ROOM_NAME_VALIDATE_PATTERN_STR }
+                                        // placeholder = { this.state.roomPlaceholder }
+                                        placeholder = "Enter room name..."
                                         ref = { this._setRoomInputRef }
                                         title = { t('welcomepage.roomNameAllowedChars') }
                                         type = 'text'
@@ -272,7 +275,7 @@ class WelcomePage extends AbstractWelcomePage {
                             ref = { this._setAdditionalContentRef } />
                         : null }
                 </div>
-                { DISPLAY_WELCOME_FOOTER && this._renderFooter()}
+                {/* { DISPLAY_WELCOME_FOOTER && this._renderFooter()} */}
             </div>
 
         );
